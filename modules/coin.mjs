@@ -69,17 +69,17 @@ function coinFlips(flips) {
  */
 
 function countFlips(array) {
-  var heads;
-  var tails;
+  var headsCounter = 0;
+  var tailsCounter = 0;
 
   for(i=0; i<array.length; i++) {
     if(array[i]="heads") {
-      heads++;
+      headsCounter++;
     } else {
-      tails++;
+      tailsCounter++;
     }
   }
-  return "{ heads: " + heads + ", tails: " + tails + " }";
+  return { tails: tailsCounter, heads: headsCounter }
 } 
 
 /** Flip a coin!
@@ -102,7 +102,7 @@ function flipACoin(call) {
   if(!(call==flip)) {
     winLose = "lose";
   }
-  return "{ call: " + call + ", flip:", + coinFlip + ", result: " + winLose + " }";
+  return { call: call, flip: coinFlip, result: winLose }
 
 }
 
