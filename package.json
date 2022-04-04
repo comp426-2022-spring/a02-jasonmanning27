@@ -16,6 +16,9 @@
   "author": "Jason Manning",
   "license": "GPL-3.0-or-later",
   "type": "module",
+  "dependencies": {
+    "minimist": "^1.2.5"
+  },
   "bugs": {
     "url": "https://github.com/comp426-2022-spring/a02-jasonmanning27/issues"
   },
