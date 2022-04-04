@@ -7,7 +7,7 @@ import minimist from "minimist";
 const args = minimist(process.args.slice(2));
 const num = args.number || 1;
 
-let flips = coinFlip(num);
+let flips = coinFlips(num);
 let sum = countFlips(flips);
 
 if(flips.length ==1) {
