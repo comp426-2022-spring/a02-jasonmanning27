@@ -10,6 +10,15 @@ const number = input.number || 1;
 let flips = coinflips(number);
 let sum = countFlips(flips);
 
+if(flips.length ==1) {
+    if(sum.heads==0) {
+        delete sum.heads;
+    }
+    if(sum.tails==0) {
+        delete sum.tails;
+    }
+}
+
 console.log(flips);
 console.log(sum);
 
