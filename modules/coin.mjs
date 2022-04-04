@@ -49,10 +49,11 @@ function coinFlips(flips) {
 
   const results = [];
 
-  for(i=0; i <flips; i++) {
+  for(let i = 0; i < flips; i++) {
     //results[i] = coinFlip();
     results.push(coinFlip());
   }
+
   return results;
 }
 

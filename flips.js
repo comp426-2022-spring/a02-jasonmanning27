@@ -5,18 +5,21 @@ import minimist from "minimist";
 
 // Call the coinFlip function and put the return into STDOUT
 const args = minimist(process.args.slice(2));
-const number = args.number || 1;
+const num = args.number || 1;
 
-let flips = coinflips(number);
+let flips = coinFlip(num);
 let sum = countFlips(flips);
 
 if(flips.length ==1) {
+
     if(sum.heads==0) {
         delete sum.heads;
     }
+
     if(sum.tails==0) {
         delete sum.tails;
     }
+
 }
 
 console.log(flips);
