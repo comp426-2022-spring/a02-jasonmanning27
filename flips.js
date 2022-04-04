@@ -4,7 +4,7 @@ import { coinFlip, countFlips } from "./modules/coin.mjs";
 import minimist from "minimist";
 
 // Call the coinFlip function and put the return into STDOUT
-const args = minimist(process.args.slice(2));
+const args = minimist(process.argv.slice(2));
 const num = args.number || 1;
 
 let flips = coinFlips(num);
