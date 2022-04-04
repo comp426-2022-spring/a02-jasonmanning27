@@ -4,13 +4,19 @@ import { coinFlip, countFlips } from "./modules/coin.mjs";
 import minimist from "minimist";
 
 // Call the coinFlip function and put the return into STDOUT
-const myArgs = minimist(process.argv.slice(2));
-const number = args.number || 1; // need to make sure it has a value if no input
+const input = minimist(process.argv.slice(2));
 
-let flips = coinFlips(number);
-let sum = countFlips(flips);
+input['number']; 
+var flips = []; // initialize flips array
 
-var array = coinFlips(myArgs['number']);
+if(input != null) { // if input is number
+    flips = coinFlips(number);
+    
+    console.log(flips);
+    console.log(countFlips(flips));
+} else { // if no input
+    flips = coinFlips(1); // set to 1 if no input
 
-console.log(flips);
-console.log(sum);
+    console.log(flips);
+    console.log(countFlips(flips));
+}
