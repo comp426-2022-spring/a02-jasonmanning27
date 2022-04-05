@@ -12,18 +12,22 @@ import minimist from "minimist";
 const args = minimist(process.argv.slice(2));
 const guess = args.guess || "backup";
 
-if(guess == "backup") {
+
+if(guess == "backup") { // check if no input
     console.error("no input");
-}  else if ((guess != "heads") && (guess != "tails")) {
+}  else if ((guess != "heads") && (guess != "tails")) { // check if input is valid
     console.log("invalid input");
 } else {
     const hold = coinFlip();
-    let winlose = "lose";
-    if(hold == guess) {
-        winlose = "win";
+    let winLose = "lose";
+
+    if(hold == guess) { // check if guess = flip result
+        winLose = "win";
     }
     let results = {
-        call: guess, flip: hold, result: winlose
+        call: guess, 
+        flip: hold, 
+        results: winLose
     };
     console.log(results);
 }
