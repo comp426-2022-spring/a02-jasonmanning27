@@ -10,10 +10,10 @@ import minimist from "minimist";
 
 
 const args = minimist(process.argv.slice(2));
-const call = args.guess || "backup";
+const call = args.call || "noInput";
 
 
-if(call == "backup") { // check if no input
+if(call == "noInput") { // check if no input
     console.error("Error: no input.\n Usage: node guess-flip --call=[heads|tails]");
 }  else if ((call != "heads") && (call != "tails")) { // check if input is valid
     console.log("Usage: node guess-flip --call=[heads|tails]");
@@ -24,10 +24,8 @@ if(call == "backup") { // check if no input
     if(hold == call) { // check if guess = flip result
         winLose = "win";
     }
-    let results = {
-        call: call, 
-        flip: hold, 
-        results: winLose
+    let result = {
+        call: call, flip: hold, result: winLose
     };
-    console.log(results);
+    console.log(result);
 }
