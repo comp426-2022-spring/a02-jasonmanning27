@@ -21,7 +21,7 @@ if(call == "backup") { // check if no input
     const hold = coinFlip();
     let winLose = "lose";
 
-    if(hold == guess) { // check if guess = flip result
+    if(hold == call) { // check if guess = flip result
         winLose = "win";
     }
     let results = {
