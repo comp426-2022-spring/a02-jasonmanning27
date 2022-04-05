@@ -14,9 +14,9 @@ const call = args.guess || "backup";
 
 
 if(call == "backup") { // check if no input
-    console.error("Usage: node guess-flip --call=[heads|tails]");
+    console.error("No input: Usage: node guess-flip --call=[heads|tails]");
 }  else if ((call != "heads") && (guess != "tails")) { // check if input is valid
-    console.log("invalid input");
+    console.log("Usage: node guess-flip --call=[heads|tails]");
 } else {
     const hold = coinFlip();
     let winLose = "lose";
